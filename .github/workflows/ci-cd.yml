@@ -6,15 +6,15 @@ on:
     paths:
       - "app/**"
       - "Dockerfile"
+      - ".github/workflows/ci-cd.yml"
   pull_request:
     branches: [main]
     paths:
       - "app/**"
       - "Dockerfile"
-
+      - ".github/workflows/ci-cd.yml"
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository }}/dashboard-app
-
+   IMAGE_NAME: ghcr.io/vinicius90vn/aiven-devops-pipeline-main/dashboard-app
 jobs:
   test:
     name: Testes e lint
